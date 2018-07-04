@@ -1,0 +1,6 @@
+{
+    "users": [
+        { "id": 1, "title": "json-server", "author": "typicode" },
+        { "id": 2, "name": "Cata", "age": 26}
+    ]
+}
