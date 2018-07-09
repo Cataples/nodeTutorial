@@ -1,10 +1,12 @@
 var http = require( 'http' );
 var fs = require('fs');
 
-var myReadStream = fs.createReadStream(__dirname + '/utilFiles/users.json', 'utf8');
+
 
 //  WRITE ON SERVER DATA FROM README.TXT
 var server = http.createServer( function( request, response ){
+    var myReadStream = fs.createReadStream(__dirname + '/utilFiles/users.json', 'utf8');
+
     console.log( 'request was made ' + request.url )
     response.writeHead( 200, { 'Content-Type': 'application/json' });
     

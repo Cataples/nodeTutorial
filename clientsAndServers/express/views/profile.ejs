@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- includem contentul din nav.ejs aici -->
+        <% include partials/nav.ejs %>
+        <h1>wellcome to the profile of <%= person %></h1> 
+        <p>Hello, <%= person %>, you are <%= data.age %> and you are a <%= data.job %></p>
+        <h2>Your hobbies are</h2>
+        <ul>
+            <% data.hobbies.forEach( item => { %>
+                <li> <%= item %> </li>
+            <% } ); %>
+        </ul>
+    </body>
+</html>
